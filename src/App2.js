@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import TodoList from './TodoList';
-import TodoItems from './TodoItems';
+import TodoList2 from './TodoList2';
+import TodoItems2 from './TodoItems2';
 import './App.css';
 
-class App extends Component {
+class App2 extends Component {
   inputElement = React.createRef() //To refer to the input, we create a ref with inputElement =React.createRef().
   constructor() {//React.Component is the base class for all class based React JS components. Whenever a class inherits the class React.Component its constructor will automatically assign attribute state to the class with initial value set to null. We can change it by overriding the method constructor.
  
@@ -50,14 +50,14 @@ class App extends Component {
  render() {
    return (
     <div className ="App">
-    <h1>Business ToDo List</h1>
-       <TodoList
+    <h1>Private ToDo List</h1>
+       <TodoList2
          addItem={this.addItem}
          inputElement={this.inputElement} // used for setting the focus on the input field
          handleInput={this.handleInput} // is called everytime the input box content changes
          currentItem={this.state.currentItem}
        />
-       <TodoItems
+       <TodoItems2
          entries={this.state.items}
          deleteItem={this.deleteItem} //we have created a new property in App.js as deleteItem.
        />
@@ -66,5 +66,5 @@ class App extends Component {
  }
 }
 
-export default App
+export default App2
 
